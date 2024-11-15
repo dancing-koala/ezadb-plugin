@@ -1,0 +1,70 @@
+<idea-plugin>
+    <id>com.cobr.QuickADB</id>
+    <name>QuickADB</name>
+    <vendor email="support-cobr@pm.me" url="https://github.com/dancing-koala">
+        Cobr
+    </vendor>
+    <description>
+        <![CDATA[ TODO real description of the plugin with simple formatting]]>
+    </description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.android</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="QuickADB [log]"
+                           isLogByDefault="true"
+                           displayType="NONE"/>
+        <notificationGroup id="QuickADB [err]"
+                           isLogByDefault="true"
+                           displayType="BALLOON"/>
+    </extensions>
+    <actions>
+        <action id="com.cobr.quickadb.actions.ListAllAction"
+                class="com.cobr.quickadb.actions.ListAllAction"
+                text="QuickADB Actions...">
+            <keyboard-shortcut
+                    keymap="Mac OS X" first-keystroke="shift ctrl A"/>
+            <keyboard-shortcut
+                    keymap="Mac OS X 10.5+" first-keystroke="shift ctrl A"/>
+            <keyboard-shortcut
+                    keymap="$default" first-keystroke="shift ctrl alt A"/>
+        </action>
+
+        <action id="com.cobr.quickadb.actions.UninstallAppAction"
+                class="com.cobr.quickadb.actions.UninstallAppAction"
+                text="QuickADB: Uninstall App"/>
+
+        <action id="com.cobr.quickadb.actions.KillAppAction"
+                class="com.cobr.quickadb.actions.KillAppAction"
+                text="QuickADB: Kill App"/>
+
+        <action id="com.cobr.quickadb.actions.StartAppAction"
+                class="com.cobr.quickadb.actions.StartAppAction"
+                text="QuickADB: Start App"/>
+
+        <action id="com.cobr.quickadb.actions.RestartAppAction"
+                class="com.cobr.quickadb.actions.RestartAppAction"
+                text="QuickADB: Restart App"/>
+
+        <action id="com.cobr.quickadb.actions.ClearAppDataAction"
+                class="com.cobr.quickadb.actions.ClearAppDataAction"
+                text="QuickADB: Clear App Data"/>
+
+        <action id="com.cobr.quickadb.actions.ClearAppDataAndRestartAction"
+                class="com.cobr.quickadb.actions.ClearAppDataAndRestartAction"
+                text="QuickADB: Clear App Data And Restart"/>
+
+        <action id="com.cobr.quickadb.actions.RevokeAppPermissionsAction"
+                class="com.cobr.quickadb.actions.RevokeAppPermissionsAction"
+                text="QuickADB: Revoke App Permissions"/>
+
+        <action id="com.cobr.quickadb.actions.StartAppWithDebuggerAction"
+                class="com.cobr.quickadb.actions.StartAppWithDebuggerAction"
+                text="QuickADB: Start App With Debugger"/>
+
+        <action id="com.cobr.quickadb.actions.RestartAppWithDebuggerAction"
+                class="com.cobr.quickadb.actions.RestartAppWithDebuggerAction"
+                text="QuickADB: Restart App With Debugger"/>
+    </actions>
+</idea-plugin>
