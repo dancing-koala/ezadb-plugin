@@ -45,3 +45,7 @@ bin/
 ### CUSTOM ###
 .kotlin
 .intellijPlatform
+
+### SECURITY ###
+cert
+local.properties

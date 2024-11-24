@@ -1,3 +1,5 @@
+import java.util.*
+
 plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "2.0.21"
@@ -40,9 +42,15 @@ intellijPlatform {
     }
 
     signing {
-        certificateChain = System.getenv("CERTIFICATE_CHAIN")
-        privateKey = System.getenv("PRIVATE_KEY")
-        password = System.getenv("PRIVATE_KEY_PASSWORD")
+        val localProps = Properties()
+
+        File(rootDir, "local.properties").takeIf { it.exists() }
+            ?.inputStream()
+            ?.use(localProps::load)
+
+        certificateChainFile.set(file("cert/chain.crt"))
+        privateKeyFile.set(file("cert/private.pem"))
+        password = localProps.getProperty("privateKeyPassword")
     }
 
     publishing {
