@@ -4,9 +4,38 @@
     <vendor email="support-cobr@pm.me" url="https://github.com/dancing-koala">
         Cobr
     </vendor>
-    <description>
-        <![CDATA[ TODO real description of the plugin with simple formatting]]>
-    </description>
+    <description><![CDATA[
+        This plugin is deeply inspired by <a href="https://plugins.jetbrains.com/plugin/7380-adb-idea">ADB Idea</a>.
+
+        I created QuickADB because ADB Idea is not compatible with the latest versions (242+) of IntelliJ Idea.
+
+        This plugin adds the following ADB actions to Intellij Idea:<br />
+        <ul>
+            <li>QuickADB: Uninstall App</li>
+            <li>QuickADB: Kill App</li>
+            <li>QuickADB: Start App</li>
+            <li>QuickADB: Restart App</li>
+            <li>QuickADB: Clear App Data</li>
+            <li>QuickADB: Clear App Data and Restart</li>
+            <li>QuickADB: Start App With Debugger</li>
+            <li>QuickADB: Revoke App Permissions</li>
+            <li>QuickADB: Restart App With Debugger</li>
+        </ul>
+        <br />
+
+        How to use :
+        <ul>
+            <li>Open the dedicated dialog with the shortcut: shift + ctrl + A on MacOs, shift + ctrl + alt + A on Windows/Linux;</li>
+            <li>Search actions in the global search (shift shift) with the term ADB;</li>
+        </ul>
+
+        ]]></description>
+
+    <change-notes><![CDATA[
+      <ul>
+        <li><b>1.0.0</b> Initial release.</li>
+      </ul>
+    ]]></change-notes>
 
     <depends>com.intellij.modules.platform</depends>
     <depends>org.jetbrains.android</depends>
