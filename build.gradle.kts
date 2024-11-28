@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.cobr.quickadb"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -32,6 +32,11 @@ dependencies {
 }
 
 intellijPlatform {
+    val localProps = Properties()
+
+    File(rootDir, "local.properties").takeIf { it.exists() }
+        ?.inputStream()
+        ?.use(localProps::load)
 
     pluginConfiguration {
 
@@ -41,21 +46,15 @@ intellijPlatform {
         }
     }
 
+
     signing {
-        val localProps = Properties()
-
-        File(rootDir, "local.properties").takeIf { it.exists() }
-            ?.inputStream()
-            ?.use(localProps::load)
-
         certificateChainFile.set(file("cert/chain.crt"))
         privateKeyFile.set(file("cert/private.pem"))
         password = localProps.getProperty("privateKeyPassword")
     }
 
     publishing {
-        host = ""
-        token = "7hR4nD0mT0k3n_8f2eG"
+        token = localProps.getProperty("intellijPlatformPublishingToken")
         channels = listOf("default")
         ideServices = false
         hidden = false
