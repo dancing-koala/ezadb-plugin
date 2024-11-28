@@ -1,5 +1,13 @@
 import java.util.*
 
+val localProperties by lazy {
+    Properties().apply {
+        File(rootDir, "local.properties").takeIf { it.exists() }
+            ?.inputStream()
+            ?.use(this::load)
+    }
+}
+
 plugins {
     id("java")
     id("org.jetbrains.kotlin.jvm") version "2.0.21"
@@ -32,12 +40,6 @@ dependencies {
 }
 
 intellijPlatform {
-    val localProps = Properties()
-
-    File(rootDir, "local.properties").takeIf { it.exists() }
-        ?.inputStream()
-        ?.use(localProps::load)
-
     pluginConfiguration {
 
         ideaVersion {
@@ -46,18 +48,14 @@ intellijPlatform {
         }
     }
 
-
     signing {
         certificateChainFile.set(file("cert/chain.crt"))
         privateKeyFile.set(file("cert/private.pem"))
-        password = localProps.getProperty("privateKeyPassword")
+        password = localProperties.getProperty("privateKeyPassword")
     }
 
     publishing {
-        token = localProps.getProperty("intellijPlatformPublishingToken")
-        channels = listOf("default")
-        ideServices = false
-        hidden = false
+        token = localProperties.getProperty("intellijPlatformPublishingToken")
     }
 }
 
