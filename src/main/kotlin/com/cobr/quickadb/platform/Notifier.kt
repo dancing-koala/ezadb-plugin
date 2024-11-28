@@ -10,12 +10,12 @@ object Notifier {
 
     private val INFO by lazy {
         NotificationGroupManager.getInstance()
-            .getNotificationGroup("QuickADB [log]")
+            .getNotificationGroup("ezADB [log]")
     }
 
     private val ERRORS by lazy {
         NotificationGroupManager.getInstance()
-            .getNotificationGroup("QuickADB [log]")
+            .getNotificationGroup("ezADB [log]")
     }
 
     fun info(message: String) =
@@ -24,6 +24,7 @@ object Notifier {
     fun error(message: String) =
         sendNotification(message, NotificationType.ERROR, ERRORS)
 
+    @Suppress("DialogTitleCapitalization")
     private fun sendNotification(
         message: String,
         notificationType: NotificationType,
@@ -32,7 +33,7 @@ object Notifier {
         log.log("sendNotification: [$notificationType] $message")
 
         notificationGroup.createNotification(
-            "QuickADB",
+            "ezADB",
             message,
             notificationType,
         ).notify(null)

@@ -7,7 +7,7 @@ import com.intellij.openapi.project.Project
 import kotlinx.coroutines.CoroutineScope
 
 @Service(Service.Level.PROJECT)
-class QuickADBService(
+class MainService(
     private val project: Project,
     unusedScope: CoroutineScope
 ) {

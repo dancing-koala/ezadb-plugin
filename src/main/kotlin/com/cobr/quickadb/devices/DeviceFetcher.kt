@@ -2,7 +2,7 @@ package com.cobr.quickadb.devices
 
 import com.android.ddmlib.AndroidDebugBridge
 import com.android.ddmlib.IDevice
-import com.cobr.quickadb.QuickADBService
+import com.cobr.quickadb.MainService
 import com.cobr.quickadb.platform.Notifier
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
@@ -18,7 +18,7 @@ fun getDevice(
         return null
     }
 
-    val preferences = project.service<QuickADBService>().preferences
+    val preferences = project.service<MainService>().preferences
     val lastTargetSerial = preferences.lastTargetSerial
 
     if (devices.size == 1) {
