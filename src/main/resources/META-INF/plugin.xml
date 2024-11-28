@@ -1,25 +1,26 @@
+<!--suppress PluginXmlCapitalization -->
 <idea-plugin>
     <id>com.cobr.QuickADB</id>
-    <name>QuickADB</name>
+    <name>ezADB</name>
     <vendor email="support-cobr@pm.me" url="https://github.com/dancing-koala">
         Cobr
     </vendor>
     <description><![CDATA[
         This plugin is deeply inspired by <a href="https://plugins.jetbrains.com/plugin/7380-adb-idea">ADB Idea</a>.
 
-        I created QuickADB because ADB Idea is not compatible with the latest versions (242+) of IntelliJ Idea.
+        I created ezADB because ADB Idea is not compatible with the latest versions (242+) of IntelliJ Idea.
 
         This plugin adds the following ADB actions to Intellij Idea:<br />
         <ul>
-            <li>QuickADB: Uninstall App</li>
-            <li>QuickADB: Kill App</li>
-            <li>QuickADB: Start App</li>
-            <li>QuickADB: Restart App</li>
-            <li>QuickADB: Clear App Data</li>
-            <li>QuickADB: Clear App Data and Restart</li>
-            <li>QuickADB: Start App With Debugger</li>
-            <li>QuickADB: Revoke App Permissions</li>
-            <li>QuickADB: Restart App With Debugger</li>
+            <li>ezADB: Uninstall App</li>
+            <li>ezADB: Kill App</li>
+            <li>ezADB: Start App</li>
+            <li>ezADB: Restart App</li>
+            <li>ezADB: Clear App Data</li>
+            <li>ezADB: Clear App Data and Restart</li>
+            <li>ezADB: Start App With Debugger</li>
+            <li>ezADB: Revoke App Permissions</li>
+            <li>ezADB: Restart App With Debugger</li>
         </ul>
         <br />
 
@@ -41,17 +42,17 @@
     <depends>org.jetbrains.android</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <notificationGroup id="QuickADB [log]"
+        <notificationGroup id="ezADB [log]"
                            isLogByDefault="true"
                            displayType="NONE"/>
-        <notificationGroup id="QuickADB [err]"
+        <notificationGroup id="ezADB [err]"
                            isLogByDefault="true"
                            displayType="BALLOON"/>
     </extensions>
     <actions>
         <action id="com.cobr.quickadb.actions.ListAllAction"
                 class="com.cobr.quickadb.actions.ListAllAction"
-                text="QuickADB Actions...">
+                text="ezADB Actions...">
             <keyboard-shortcut
                     keymap="Mac OS X" first-keystroke="shift ctrl A"/>
             <keyboard-shortcut
@@ -62,38 +63,38 @@
 
         <action id="com.cobr.quickadb.actions.UninstallAppAction"
                 class="com.cobr.quickadb.actions.UninstallAppAction"
-                text="QuickADB: Uninstall App"/>
+                text="ezADB: Uninstall App"/>
 
         <action id="com.cobr.quickadb.actions.KillAppAction"
                 class="com.cobr.quickadb.actions.KillAppAction"
-                text="QuickADB: Kill App"/>
+                text="ezADB: Kill App"/>
 
         <action id="com.cobr.quickadb.actions.StartAppAction"
                 class="com.cobr.quickadb.actions.StartAppAction"
-                text="QuickADB: Start App"/>
+                text="ezADB: Start App"/>
 
         <action id="com.cobr.quickadb.actions.RestartAppAction"
                 class="com.cobr.quickadb.actions.RestartAppAction"
-                text="QuickADB: Restart App"/>
+                text="ezADB: Restart App"/>
 
         <action id="com.cobr.quickadb.actions.ClearAppDataAction"
                 class="com.cobr.quickadb.actions.ClearAppDataAction"
-                text="QuickADB: Clear App Data"/>
+                text="ezADB: Clear App Data"/>
 
         <action id="com.cobr.quickadb.actions.ClearAppDataAndRestartAction"
                 class="com.cobr.quickadb.actions.ClearAppDataAndRestartAction"
-                text="QuickADB: Clear App Data And Restart"/>
+                text="ezADB: Clear App Data And Restart"/>
 
         <action id="com.cobr.quickadb.actions.RevokeAppPermissionsAction"
                 class="com.cobr.quickadb.actions.RevokeAppPermissionsAction"
-                text="QuickADB: Revoke App Permissions"/>
+                text="ezADB: Revoke App Permissions"/>
 
         <action id="com.cobr.quickadb.actions.StartAppWithDebuggerAction"
                 class="com.cobr.quickadb.actions.StartAppWithDebuggerAction"
-                text="QuickADB: Start App With Debugger"/>
+                text="ezADB: Start App With Debugger"/>
 
         <action id="com.cobr.quickadb.actions.RestartAppWithDebuggerAction"
                 class="com.cobr.quickadb.actions.RestartAppWithDebuggerAction"
-                text="QuickADB: Restart App With Debugger"/>
+                text="ezADB: Restart App With Debugger"/>
     </actions>
 </idea-plugin>
