@@ -1,6 +1,6 @@
 <!--suppress PluginXmlCapitalization -->
 <idea-plugin>
-    <id>com.cobr.ezadb</id>
+    <id>com.cobr.QuickADB</id>
     <name>ezADB</name>
     <vendor email="support-cobr@pm.me" url="https://github.com/dancing-koala">
         Cobr
@@ -36,6 +36,7 @@
       <ul>
         <li><b>1.0.0</b> Initial release.</li>
         <li><b>1.0.3</b> Rename plugin to "ezADB".</li>
+        <li><b>1.0.4</b> Improve plugin description.</li>
       </ul>
     ]]></change-notes>
 
