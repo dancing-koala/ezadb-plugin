@@ -8,9 +8,9 @@
     <description><![CDATA[
         This plugin is deeply inspired by <a href="https://plugins.jetbrains.com/plugin/7380-adb-idea">ADB Idea</a>.
 
-        I created ezADB because ADB Idea is not compatible with the latest versions (242+) of IntelliJ Idea.
+        I created <strong>ezADB</strong> because <strong>ADB Idea</strong> is not compatible with the latest versions (242+) of <strong>IntelliJ Idea</strong>.
 
-        This plugin adds the following ADB actions to Intellij Idea:<br />
+        This plugin adds the following ADB actions to <strong>Intellij Idea</strong>:<br />
         <ul>
             <li>ezADB: Uninstall App</li>
             <li>ezADB: Kill App</li>
@@ -18,16 +18,16 @@
             <li>ezADB: Restart App</li>
             <li>ezADB: Clear App Data</li>
             <li>ezADB: Clear App Data and Restart</li>
-            <li>ezADB: Start App With Debugger</li>
             <li>ezADB: Revoke App Permissions</li>
+            <li>ezADB: Start App With Debugger</li>
             <li>ezADB: Restart App With Debugger</li>
         </ul>
         <br />
 
         How to use :
         <ul>
-            <li>Open the dedicated dialog with the shortcut: shift + ctrl + A on MacOs, shift + ctrl + alt + A on Windows/Linux;</li>
-            <li>Search actions in the global search (shift shift) with the term ADB;</li>
+            <li>Open the dedicated dialog with the shortcut: <pre>shift + ctrl + A</pre> on MacOs, <pre>shift + ctrl + alt + A</pre> on Windows/Linux;</li>
+            <li>Search actions in the global search (<pre>shift shift</pre>) with the term ADB;</li>
         </ul>
 
         ]]></description>
