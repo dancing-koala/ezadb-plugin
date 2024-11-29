@@ -1,6 +1,6 @@
 <!--suppress PluginXmlCapitalization -->
 <idea-plugin>
-    <id>com.cobr.QuickADB</id>
+    <id>com.cobr.ezadb</id>
     <name>ezADB</name>
     <vendor email="support-cobr@pm.me" url="https://github.com/dancing-koala">
         Cobr
@@ -51,8 +51,8 @@
                            displayType="BALLOON"/>
     </extensions>
     <actions>
-        <action id="com.cobr.quickadb.actions.ListAllAction"
-                class="com.cobr.quickadb.actions.ListAllAction"
+        <action id="com.cobr.ezadb.actions.ListAllAction"
+                class="com.cobr.ezadb.actions.ListAllAction"
                 text="ezADB Actions...">
             <keyboard-shortcut
                     keymap="Mac OS X" first-keystroke="shift ctrl A"/>
@@ -62,40 +62,40 @@
                     keymap="$default" first-keystroke="shift ctrl alt A"/>
         </action>
 
-        <action id="com.cobr.quickadb.actions.UninstallAppAction"
-                class="com.cobr.quickadb.actions.UninstallAppAction"
+        <action id="com.cobr.ezadb.actions.UninstallAppAction"
+                class="com.cobr.ezadb.actions.UninstallAppAction"
                 text="ezADB: Uninstall App"/>
 
-        <action id="com.cobr.quickadb.actions.KillAppAction"
-                class="com.cobr.quickadb.actions.KillAppAction"
+        <action id="com.cobr.ezadb.actions.KillAppAction"
+                class="com.cobr.ezadb.actions.KillAppAction"
                 text="ezADB: Kill App"/>
 
-        <action id="com.cobr.quickadb.actions.StartAppAction"
-                class="com.cobr.quickadb.actions.StartAppAction"
+        <action id="com.cobr.ezadb.actions.StartAppAction"
+                class="com.cobr.ezadb.actions.StartAppAction"
                 text="ezADB: Start App"/>
 
-        <action id="com.cobr.quickadb.actions.RestartAppAction"
-                class="com.cobr.quickadb.actions.RestartAppAction"
+        <action id="com.cobr.ezadb.actions.RestartAppAction"
+                class="com.cobr.ezadb.actions.RestartAppAction"
                 text="ezADB: Restart App"/>
 
-        <action id="com.cobr.quickadb.actions.ClearAppDataAction"
-                class="com.cobr.quickadb.actions.ClearAppDataAction"
+        <action id="com.cobr.ezadb.actions.ClearAppDataAction"
+                class="com.cobr.ezadb.actions.ClearAppDataAction"
                 text="ezADB: Clear App Data"/>
 
-        <action id="com.cobr.quickadb.actions.ClearAppDataAndRestartAction"
-                class="com.cobr.quickadb.actions.ClearAppDataAndRestartAction"
+        <action id="com.cobr.ezadb.actions.ClearAppDataAndRestartAction"
+                class="com.cobr.ezadb.actions.ClearAppDataAndRestartAction"
                 text="ezADB: Clear App Data And Restart"/>
 
-        <action id="com.cobr.quickadb.actions.RevokeAppPermissionsAction"
-                class="com.cobr.quickadb.actions.RevokeAppPermissionsAction"
+        <action id="com.cobr.ezadb.actions.RevokeAppPermissionsAction"
+                class="com.cobr.ezadb.actions.RevokeAppPermissionsAction"
                 text="ezADB: Revoke App Permissions"/>
 
-        <action id="com.cobr.quickadb.actions.StartAppWithDebuggerAction"
-                class="com.cobr.quickadb.actions.StartAppWithDebuggerAction"
+        <action id="com.cobr.ezadb.actions.StartAppWithDebuggerAction"
+                class="com.cobr.ezadb.actions.StartAppWithDebuggerAction"
                 text="ezADB: Start App With Debugger"/>
 
-        <action id="com.cobr.quickadb.actions.RestartAppWithDebuggerAction"
-                class="com.cobr.quickadb.actions.RestartAppWithDebuggerAction"
+        <action id="com.cobr.ezadb.actions.RestartAppWithDebuggerAction"
+                class="com.cobr.ezadb.actions.RestartAppWithDebuggerAction"
                 text="ezADB: Restart App With Debugger"/>
     </actions>
 </idea-plugin>

@@ -14,7 +14,7 @@ plugins {
     id("org.jetbrains.intellij.platform") version "2.1.0"
 }
 
-group = "com.cobr.quickadb"
+group = "com.cobr.ezadb"
 version = "1.0.3"
 
 repositories {
